@@ -13,6 +13,8 @@
 		8590BE86285F868E00931000 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8590BE84285F868E00931000 /* Main.storyboard */; };
 		8590BE88285F868F00931000 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8590BE87285F868F00931000 /* Assets.xcassets */; };
 		8590BE8B285F868F00931000 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8590BE89285F868F00931000 /* LaunchScreen.storyboard */; };
+		8590BE932860661300931000 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8590BE922860661300931000 /* Card.swift */; };
+		8590BE952860669300931000 /* ConcentrationGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8590BE942860669300931000 /* ConcentrationGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		8590BE87285F868F00931000 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8590BE8A285F868F00931000 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8590BE8C285F868F00931000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8590BE922860661300931000 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		8590BE942860669300931000 /* ConcentrationGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcentrationGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				8590BE7E285F868E00931000 /* AppDelegate.swift */,
 				8590BE80285F868E00931000 /* SceneDelegate.swift */,
 				8590BE82285F868E00931000 /* ViewController.swift */,
+				8590BE922860661300931000 /* Card.swift */,
+				8590BE942860669300931000 /* ConcentrationGame.swift */,
 				8590BE84285F868E00931000 /* Main.storyboard */,
 				8590BE87285F868F00931000 /* Assets.xcassets */,
 				8590BE89285F868F00931000 /* LaunchScreen.storyboard */,
@@ -140,7 +146,9 @@
 			files = (
 				8590BE83285F868E00931000 /* ViewController.swift in Sources */,
 				8590BE7F285F868E00931000 /* AppDelegate.swift in Sources */,
+				8590BE952860669300931000 /* ConcentrationGame.swift in Sources */,
 				8590BE81285F868E00931000 /* SceneDelegate.swift in Sources */,
+				8590BE932860661300931000 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +301,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -321,6 +330,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
