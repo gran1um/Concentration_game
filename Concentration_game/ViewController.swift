@@ -9,9 +9,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var touchLabel: UILabel!
-    @IBOutlet var buttonCollection: [UIButton]!
-    @IBAction func buttonAction(_ sender: UIButton) {
+    @IBOutlet weak private var touchLabel: UILabel!
+    @IBOutlet private var buttonCollection: [UIButton]!
+    @IBAction private func buttonAction(_ sender: UIButton) {
         touches += 1
         if let buttonIndex = buttonCollection.firstIndex(of: sender){
             game.chooseCard(at: buttonIndex)
@@ -20,21 +20,21 @@ class ViewController: UIViewController {
       
     }
     
-    var touches = 0 {
+    private(set) var touches = 0 {
         didSet{
             touchLabel.text = "Touches: \(touches)"
         }
     }
     
-    lazy var game = ConcentrationGame(numberOfPairsOfCards: numberOfPairsOfCards)
+    private lazy var game = ConcentrationGame(numberOfPairsOfCards: numberOfPairsOfCards)
     
-    var numberOfPairsOfCards: Int {
+    private var numberOfPairsOfCards: Int {
         return (buttonCollection.count+1)/2
     }
     
-    var emojiCollection = ["🐭","🐼","🐻","🐱","🦁","🐵","🥷","💩","👾","👨‍💻","🌚","⭐️","🏎","🚘","📱","👀","🧸","🐹","💰","🍰","🏀","🏆", "🎮","🧩","🎰", "🍟"]
+    private var emojiCollection = ["🐭","🐼","🐻","🐱","🦁","🐵","🥷","💩","👾","👨‍💻","🌚","⭐️","🏎","🚘","📱","👀","🧸","🐹","💰","🍰","🏀","🏆", "🎮","🧩","🎰", "🍟"]
     
-    var emojiDictionary = [Int: String]()
+    private var emojiDictionary = [Int: String]()
     
     
     
@@ -46,7 +46,7 @@ class ViewController: UIViewController {
         }
     }
 
-    func emojiIdentifier(for card: Card) -> String {
+    private func emojiIdentifier(for card: Card) -> String {
         if emojiDictionary[card.identifier] == nil {
             let randomIndex = Int.random(in: 0..<emojiCollection.count)
             emojiDictionary[card.identifier] = emojiCollection.remove(at: randomIndex)
@@ -54,7 +54,7 @@ class ViewController: UIViewController {
         return emojiDictionary[card.identifier] ?? "?"
     }
     
-    func updateViewFromModel(){
+    private func updateViewFromModel(){
         for index in buttonCollection.indices{
             let button = buttonCollection[index]
             let card = game.cards[index]
